@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'smartHome',
     'cloudinary_storage',
     'cloudinary',
-    'media',
 ]
 
 MIDDLEWARE = [
