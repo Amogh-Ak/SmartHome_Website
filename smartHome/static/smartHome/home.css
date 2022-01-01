@@ -1,0 +1,178 @@
+.sH-container{
+    width: 100%;
+    height:570px;
+    position: relative;
+}
+
+.sH-content{
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+}
+
+.h1-edit{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.h1-edit h1{
+    font-weight: bold;
+}
+
+.h1-edit span{
+    color: rgb(39, 82, 223);
+}
+
+.sH-img img{
+    margin-top: 8rem;
+    width: 100%;
+    height: auto;
+    float: right;
+    max-width: 400px
+}
+
+.sH-content h2{
+    margin-top: -10rem;
+}
+
+.item img{
+    object-fit: contain;
+}
+
+.mp-item h2{
+    margin-top: -14rem;
+    margin-left: 5rem;
+    font-size: 1.7rem;
+    width: 40%;
+    margin-bottom: 0;
+}
+
+.mp-item p{
+    width: 50%;
+    margin-left: 1.5rem;
+    font-weight: 400;
+}
+
+#mp_btn{
+    margin-left: 8rem;
+}
+
+#mp_btn:hover,
+#mp_btn:active{
+    background-color: #212529;
+    color: whitesmoke;
+}
+
+.container-cus{
+    display: flex;
+}
+
+#cus-card{
+    margin: 3rem 1rem;
+    
+}
+
+@media screen and (max-width:640px) {
+    .sH-container{
+        position: relative;
+    }
+
+    .sH-content{
+        position: absolute;
+        width: 100%;
+    }
+
+    .h1-edit{
+        position: absolute;
+        
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .h1-edit h1{
+        font-weight: 600;
+    }
+    .sH-img img{
+        float: right;
+        margin-top: 8rem;
+        max-width: 20rem;
+        width: 100%;
+        height: auto;
+    }
+
+    #mp-id-item h2{
+     
+     display: none;
+    }
+
+    #mp-id-item p {
+        display: none;
+    }
+
+    #mp-id-item button{
+        margin-left: 5rem;
+    }
+
+    #mp_btn:hover,
+    #mp_btn:active{
+    background-color: #212529;
+    color: whitesmoke;
+}
+    
+}
+
+@media screen and (max-width:900px){
+        
+    .sH-content{
+        position: absolute;
+        width: 100%;
+    }
+
+    .h1-edit{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .sH-content img{
+        margin-left: 22rem;
+        margin-top: 8rem;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    #mp-id-item h2{
+        
+        float: left;
+       }
+   
+       #mp-id-item p {
+           margin-top: -10rem;
+           /* display: none; */
+       }
+   
+       #mp-id-item button{
+           margin-top: 1.5rem;
+           float: left;
+       }
+   
+       #mp_btn:hover,
+       #mp_btn:active{
+       background-color: #212529;
+       color: whitesmoke;
+   }
+
+    .container-cus{
+        display: block;
+    }
+    .container-cus{
+        display: flex;
+    }
+    
+    #cus-card{
+        margin: 3rem 1rem;   
+    }
+}

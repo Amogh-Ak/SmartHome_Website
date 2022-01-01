@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "S:\\Main\\Works\\Django\\Dj_works\\Dj_practice\\session3\\sesscion\\Scripts\\python.exe",
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+    "emmet.includeLanguages": { "django-html": "html" }
+}

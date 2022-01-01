@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+     <div class="col-sm-8">
+              <div class="row">
+
+                  {% for device in results %}
+                      <div style="margin-left:20px">
+                      <div class="col-sm-4 text-center mb-4">
+
+                          <a href="{% url 'product-detail' device.id %}" class="btn">
+                              <div class="item">
+                                    <img src="{{device.product_image.url}}" alt="" height="300px"  width="200px" class="">
+                                    <div class="fw-bold">{{device.title}}</div>
+                                    <div class="fw-bold">Rs. {{device.discounted_price}} <small class="fw-light text-decoration-line-through">{{device.selling_price}}</small></div>
+                              </div>
+                          </a>
+
+                      </div>
+                      </div>
+                  {% endfor %}
+                  
+              </div>
+          </div>
+{% endblock  %}

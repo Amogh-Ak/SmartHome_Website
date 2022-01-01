@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Products{% endblock  %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'smartHome/home.css' %}">
+{% endblock  %}
+
+{% block content %}
+
+    <div class="sH-container">
+
+        <div class="h1-edit">
+            <h1>Welcome to <br> <span> Smart Home Store</span></h1>
+        </div>
+        <div class="sH-content">
+            {% for mp in main_product %}
+                <div class="sH-img"><img src="{{ mp.product_image.url }}" alt=""></div>
+                    <div class="mp-item" id="mp-id-item">
+                        <h2>{{mp.title}}</h2>
+                        <p>{{mp.description}}</p>
+                        <a href="{% url "product-detail" mp.id %}">
+                            <button class="btn btn-transparent shadow px-5 py-8" id="mp_btn">Explore Now</button>
+                        </a>
+                    </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <div class="m-3">
+
+        <h2>Deals of The Day</h2>
+        <!-- Slider 1 -->
+        <div class="owl-carousel" id="slider1">
+            {% for ha in homeAutomation  %}
+                <a href="{% url 'product-detail' ha.id %}" class="btn">
+            
+                    <div class="item">
+                        <img src="{{ha.product_image.url}}" alt="" height="300px">
+                        <span class="fw-bold">{{ha.title}}</span>
+                        <br><span class="fs-5">{{ha.discounted_price}}</span>
+                    </div>
+
+                </a>
+            {% endfor %}  
+        </div>
+
+    </div>
+
+
+    <div class="container-cus">
+
+        <div class="card mb-3" id="cus-card" style="max-width: 540px;">
+
+            <div class="row g-0">
+                
+                <div class="col-md-4">
+                    {% for td in cardBox1 %}
+                        <img src="{{ td.product_image.url }}" class="card-img-top" alt="...">
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'product-detail' td.id %}" style="text-decoration:none; color:black">{{td.title}}</a></h5>
+                        <p class="card-text">{{td.description}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card mb-3" id="cus-card" style="max-width: 540px;">
+            
+            <div class="row g-0">
+
+                <div class="col-md-4">
+                    {% for td in cardBox2 %}
+                        <img src="{{ td.product_image.url }}" class="card-img-top" alt="...">
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'product-detail' td.id %}" style="text-decoration:none; color:black">{{td.title}}</a></h5>
+                        <p class="card-text">{{td.description}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+
+    <div class="mx-3">
+
+        <h2>Trending Deals</h2>
+            <!-- Slider 2 -->
+        <div class="owl-carousel" id="slider2">
+
+            {% for td in trending_deals  %}
+                <div class="item">
+                    <img src="{{ td.product_image.url }}" alt="" height="300px">
+                    <span class="fw-bold">{{ td.title }}</span><br><span class="fs-5">{{ td.discounted_price }}</span>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+    
+
+    <div class="card mb-3 mt-4">
+
+        <img src="{% static 'smartHome/sH_images/scoutalarm.jpg' %}" class="card-img-top" width="698px" height="300px" alt="...">
+
+        {% for td in main_product %}
+            <div class="card-body">
+                <h5 class="card-title">{{td.title}}</h5>
+                <p class="card-text">{{td.description}}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+
+
+    <div class="container-cus">
+
+        <div class="card mb-3" id="cus-card" style="max-width: 540px;">
+            <div class="row g-0">
+
+                <div class="col-md-4">
+                    {% for td in main_product %}
+                        <img src="{{ td.product_image.url }}" class="card-img-top" alt="...">
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{td.title}}</h5>
+                        <p class="card-text">{{td.description}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card mb-3" id="cus-card" style="max-width: 540px;">
+            <div class="row g-0">
+
+                <div class="col-md-4">
+                    {% for td in main_product %}
+                        <img src="{{ td.product_image.url }}" class="card-img-top" alt="...">
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{td.title}}</h5>
+                        <p class="card-text">{{td.description}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mx-3">
+    <!-- Slider 3 -->
+    
+        <div class="owl-carousel" id="slider3">
+
+            {% for m in energy_mgt %}
+                <a href="{% url 'product-detail' m.id %}" class="btn">
+                    <div class="item">
+                        <img src="{{m.product_image.url}}" alt="" height="300">
+                        <span class="fw-bold">{{m.title}}</span><br>
+                        <span class="fs-5">Rs. {{m.discounted_price}}</span>
+                    </div>
+                </a>
+            {% endfor %}
+
+        </div>
+        
+    </div>
+
+
+{% endblock  %}
